@@ -1,0 +1,42 @@
+/* ------------------------------------------- */
+/* BUTTON | LAZY
+/* ------------------------------------------- */
+
+.btn {
+    position: relative;
+    display: inline-block;
+    color: $color-white;
+    font-size: 1.4rem;
+    font-family: 'Josefin Sans';
+    text-decoration: none;
+    border: .2rem solid $color-red;
+    padding: 1rem 4.6rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.btn::before {
+    content: "";
+    background: $color-red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+// * --- BUTTON EXPLORE --- * \\
+.btn-read::before {
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-read:hover::before {
+   height: 360%;
+}
