@@ -65,8 +65,8 @@ body {
     font-weight: 700;
 
     // SETUP THE TEXT (h2) TO DISPLAY WITH MULTIPLE COLORS IN THE BACKGROUND \\
-    display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: grid;
+    background-image: linear-gradient(to right, $color-red, $color-red-dark);
     -webkit-background-clip: text;
     color: transparent;
     /*letter-spacing: .2rem;
