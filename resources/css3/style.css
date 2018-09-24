@@ -1,0 +1,382 @@
+/* ------------------------------------------- */
+/* 7-1 TYPE FOLDER / FILES IMPLEMENTATION
+/* ------------------------------------------- */
+/* - ABSTRACTS FOLDER FILES - */
+/* ------------------------------------------- */
+/* ANIMATION | TEXT APPEAR
+/* ------------------------------------------- */
+@keyframes rev-block {
+  0% {
+    left: 0;
+    width: 0%; }
+  50% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: 0%; } }
+
+@keyframes appear-text {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* ------------------------------------------- */
+/* COLOR VARIABLES
+/* ------------------------------------------- */
+/* GREY SHADES */
+/* B & W */
+/* COLORS FOR SECTIONS BACKGROUNDS */
+/* ------------------------------------------- */
+/* GRID VARIABLES
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* FONT
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* CLAERFIX MIXIN FOR THE GRID
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MIXIN THAT CENTERS THE ELEMENTS TO VH
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* CENTERS THE BUTTONS
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERIES | SHORTCUT VERSION
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* MEDIA QUERY MANAGER
+/* ------------------------------------------- */
+/* // SIZES / DEVICES \\
+    0 - 600px > Phone
+    600 - 900px > Tablet Portrait
+    900 - 1200px > Tablet Landscape
+    [1200 - 18009 is where our normal style apply
+    1800px + >Big Desktop
+
+    1em = 16px - KIM
+*/
+/* // BREAKPOINT NAMES \\
+    $breakpoint argument choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+*/
+/* - BASE FOLDER FILES - */
+/* ------------------------------------------- */
+/* BODY TYPOGRAHPY SETUP
+/* ------------------------------------------- */
+body {
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777; }
+
+/* ------------------------------------------- */
+/* HEADING PRIMARY | TEXT / STYLE H1
+/* ------------------------------------------- */
+.heading-1 {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-1--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-1--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
+  .heading-1--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* -- ANIMATION IMPLEMENTATION -- */
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-1--sub {
+        letter-spacing: .5rem; } }
+
+/* ------------------------------------------- */
+/* HEADING SECONDARY | TEXT / STYLE H2
+/* ------------------------------------------- */
+.heading-2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #09383E, #051d20);
+  -webkit-background-clip: text;
+  color: transparent;
+  /*letter-spacing: .2rem;
+    transition: all .2s; */
+  /*
+    &:hover {
+        transform: skewY(2deg);
+    } */ }
+  @media (max-width: 56.25em) {
+    .heading-2 {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 2.5rem; } }
+
+/* --------------------------------------------- */
+/* HEADING TERTIARY + PARAGRAPH| TEXT / STYLE H3/P
+/* --------------------------------------------- */
+.heading-3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .heading-3 {
+      text-align: center; } }
+
+.heading-4 {
+  font-weight: 400;
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f7f7f7; }
+  .heading-4--dark {
+    color: #777; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.section-text {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  color: #0b454d;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 20% max-content 20%;
+  grid-column-gap: 1.5rem;
+  align-items: center; }
+  .section-text::before, .section-text::after {
+    content: "";
+    height: .1rem;
+    display: block;
+    background-color: currentColor; }
+  @media only screen and (max-width: 50em) {
+    .section-text {
+      grid-template-columns: 10% max-content 10%; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-text {
+      grid-template-columns: 5% max-content 5%; } }
+  @media only screen and (max-width: 25em) {
+    .section-text {
+      grid-template-columns: 1% max-content 1%; } }
+
+/* ------------------------------------------------ */
+/* HEADING SECONDARY BOX EFFECT | FEATURES SECTION
+/* ------------------------------------------------ */
+.section-features__heading {
+  padding: 1.2rem;
+  transition: all 500ms;
+  position: relative; }
+
+/* ------------------------------------------------ */
+/* TYPE OF THE ARTICLE | REVIEW
+/* ------------------------------------------------ */
+.type-review {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: .3rem;
+  color: #fff;
+  background-color: #e74c3c;
+  padding: .2rem;
+  justify-self: start; }
+
+/* ------------------------------------------------ */
+/* PLATFORM | REVIEWS / VG
+/* ------------------------------------------------ */
+.platform-ps4 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: .3rem;
+  color: #fff;
+  background-color: #2980b9;
+  padding: .2rem;
+  justify-self: start; }
+
+/* ------------------------------------------- */
+/* BASIC SETUP
+/* ------------------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  /* DEFINES WHAT REM IS */
+  font-size: 62.5%;
+  /* Takes 62.5% of the default font size (16px). 100 / 16 = 62.5  */
+  /* || 1rem = 10px; 10px/16px = 62.5% || */ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0; } }
+
+.container {
+  display: grid;
+  grid-template-rows: 85vh 120rem 20rem 30rem;
+  grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
+  grid-row-gap: 2rem;
+  grid-template-areas: "head head head head head head head" ". main main main main main side" ". pie pie pie pie pie side" "foot foot foot foot foot foot foot"; }
+
+/* .container {
+        display: grid;
+        grid-template-rows: 80vh min-content 40vw repeat(3, min-content);               
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];   
+        // CONTENT WILL BE DISPLAYED (RESPONSIVE) BETWEEN ITS MINIMUM CONTENT AND 1400px 
+        // TWO 1fr's ARE THE EMPTY COLUMNS THAT CENTERS REST OF THE PAGES CONTENT
+        // SIDEBAR-START | SIDEBAR-END is the sidebar option
+        // FULL-START | FULL-END is the content that goes from the begining of the VW to the end of the VW
+        // CENTER-START | CENTER-END is the content that is centered for the VW
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest) {
+            display: grid;
+            grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);               
+            grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+        }
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {    
+            display: grid;
+            grid-template-rows: 6rem calc(100vh - 6rem); // USE CALC TO "MERGE" NAVIGATION ON TOP AND HEADER INTO THE ONE SECTION
+        }
+    } */
+/* ---------------------------------------------------------- */
+/* U-CENTER-TEXT CLASS IN ABOUT SECTION | CENTERING THE TEXT
+/* ---------------------------------------------------------- */
+.ct {
+  text-align: center !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-SMALL CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.-mb-s {
+  margin-bottom: 1.5rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-MEDIUM CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mb-m {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .mb-m {
+      margin-bottom: 3rem !important; } }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-BOTTOM-BIG CLASS IN ABOUT SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mb-b {
+  margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .mb-b {
+      margin-bottom: 5rem !important; } }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-SMALL CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-s {
+  margin-top: 2rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-MEDIUM CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-m {
+  margin-top: 5rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-BIG CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-b {
+  margin-top: 8rem !important; }
+
+/* ---------------------------------------------------------- */
+/* U-MARGIN-TOP-HUGE CLASS IN TOURS SECTION | POSITION THE TEXT
+/* ---------------------------------------------------------- */
+.mt-h {
+  margin-top: 10rem !important; }
+
+/* - COMPONENTS FOLDER FILES - */
+/* - LAYOUT FOLDER FILES - */
+/* ------------------------------------------- */
+/* HEADER
+/* ------------------------------------------- */
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/hero-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr); }
+  .header__heading {
+    grid-row: 5 / 7;
+    grid-column: 2 / 11;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 2rem;
+    justify-content: center;
+    align-self: center; }
+  .header__text {
+    grid-row: 7 / 10;
+    grid-column: 2 / 10;
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 300;
+    letter-spacing: .15rem; }
+  .header__button {
+    grid-row: 8 / 9;
+    grid-column: 2 / 3; }
+  .header__type {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: .8rem; }
+  .header__platform {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: .8rem;
+    margin-left: .4rem; }
+
+/* - PAGES FOLDER FILES - */
