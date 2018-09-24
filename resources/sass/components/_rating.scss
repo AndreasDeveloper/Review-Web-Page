@@ -1,0 +1,38 @@
+/* ------------------------------------------- */
+/* RATING
+/* ------------------------------------------- */
+
+.section-rating {
+
+}
+
+.rating-1 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+
+.rating-2 {
+    grid-column: 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+
+.rating-3 {
+    grid-column: 4 / 5;
+    justify-self: center;
+    align-self: center;
+}
+
+.rating-4 {
+    grid-column: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
+
+.rating-5 {
+    grid-column: 6 / 7;
+    justify-self: center;
+    align-self: center;
+}

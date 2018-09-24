@@ -251,7 +251,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 85vh 200rem 20rem 50rem 30rem;
+  grid-template-rows: 85vh 160rem 40rem 50rem 30rem;
   grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
   grid-row-gap: 2rem;
   grid-template-areas: "head head head head head head head" ". main main main main main side" ". pie pie pie pie pie side" "test test test test test test side" "foot foot foot foot foot foot foot"; }
@@ -371,12 +371,41 @@ html {
   height: 360%; }
 
 /* ------------------------------------------- */
+/* RATING
+/* ------------------------------------------- */
+.rating-1 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  justify-self: center;
+  align-self: center; }
+
+.rating-2 {
+  grid-column: 3 / 4;
+  justify-self: center;
+  align-self: center; }
+
+.rating-3 {
+  grid-column: 4 / 5;
+  justify-self: center;
+  align-self: center; }
+
+.rating-4 {
+  grid-column: 5 / 6;
+  justify-self: center;
+  align-self: center; }
+
+.rating-5 {
+  grid-column: 6 / 7;
+  justify-self: center;
+  align-self: center; }
+
+/* ------------------------------------------- */
 /* REVIEW PAGE
 /* ------------------------------------------- */
-.review {
+.section-review {
   grid-column: 2 / 7;
   font-size: 1.8rem; }
-  .review__heading {
+  .section-review__heading {
     padding: 2rem 0;
     justify-content: center;
     color: #c0392b; }
@@ -388,10 +417,14 @@ html {
 .review-text--2 {
   text-align: center; }
 
+.review-text--6 {
+  text-align: center; }
+
 .page-info {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   border-bottom: 0.26rem solid #c0392b;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   /* -- WRITTEN BY -- */
   /* -- LAST UPDATED -- */
@@ -413,6 +446,13 @@ html {
 /* ------------------------------------------- */
 /* HEADER
 /* ------------------------------------------- */
+.header-bg {
+  background-color: #000;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr); }
+
 .header {
   grid-column: full-start / full-end;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/hero-1.jpg);
@@ -420,6 +460,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   z-index: 1;
+  height: 85vh;
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(12, 1fr); }
@@ -453,5 +494,16 @@ html {
     width: 100%;
     margin-bottom: .8rem;
     margin-left: .4rem; }
+
+/* ------------------------------------------- */
+/* SIDEBAR
+/* ------------------------------------------- */
+.sidebar {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  height: 30%;
+  margin: 0 2.5rem;
+  margin-top: 6rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
 
 /* - PAGES FOLDER FILES - */

@@ -2,7 +2,7 @@
 /* REVIEW PAGE
 /* ------------------------------------------- */
 
-.review {
+.section-review {
     
     grid-column: 2 / 7;
 
@@ -25,6 +25,10 @@
     &--2 {
         text-align: center;
     }
+
+    &--6 {
+        text-align: center;
+    }
 }
 
 .page-info {
@@ -32,6 +36,7 @@
     grid-template-columns: repeat(8, 1fr);
 
     border-bottom: .26rem solid $color-red-dark;
+    padding-top: 2rem;
     padding-bottom: 1rem;
 
     /* -- WRITTEN BY -- */

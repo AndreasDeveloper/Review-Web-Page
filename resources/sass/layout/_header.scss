@@ -2,6 +2,16 @@
 /* HEADER
 /* ------------------------------------------- */
 
+.header-bg {
+    background-color: $color-black;
+
+    grid-column: full-start / full-end;
+    // GRID SETUP \\
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .header {
 
     grid-column: full-start / full-end;
@@ -11,6 +21,7 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: 1;
+    height: 85vh;
 
     // GRID SETUP \\
     display: grid;

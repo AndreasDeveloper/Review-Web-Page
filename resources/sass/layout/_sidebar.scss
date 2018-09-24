@@ -1,0 +1,14 @@
+/* ------------------------------------------- */
+/* SIDEBAR
+/* ------------------------------------------- */
+
+.sidebar {
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    
+    height: 30%;
+    margin: 0 2.5rem;
+    margin-top: 6rem;
+    box-shadow: 0 1rem 1rem rgba($color-black, .20);
+}
