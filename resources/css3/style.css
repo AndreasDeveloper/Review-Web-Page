@@ -251,10 +251,10 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 85vh 160rem 40rem 50rem 30rem;
+  grid-template-rows: 85vh 160rem 80rem 40rem 60rem 30rem;
   grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
   grid-row-gap: 2rem;
-  grid-template-areas: "head head head head head head head" ". main main main main main side" ". pie pie pie pie pie side" "test test test test test test side" "foot foot foot foot foot foot foot"; }
+  grid-template-areas: "head head head head head head head" ". main main main main main side" ". gal gal gal gal gal gal side" ". pie pie pie pie pie side" "test test test test test test side" "foot foot foot foot foot foot foot"; }
 
 /* .container {
         display: grid;
@@ -371,31 +371,105 @@ html {
   height: 360%; }
 
 /* ------------------------------------------- */
+/* GALLERY
+/* ------------------------------------------- */
+.section-gallery {
+  height: 100vh;
+  width: 100%;
+  z-index: 9900;
+  overflow: hidden;
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end; }
+  .section-gallery__screenshot {
+    height: 100vh;
+    width: 100%;
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end; }
+
+/*
+.black-layer {
+    height: 100vh;
+    width: 150%;
+    background-color: $color-black;
+    z-index: 99;
+    position: absolute;
+    top: 285%;
+    left: 100%;
+
+    grid-row: 3 / 4;
+    grid-column: 7 / 8;
+    justify-self: end;
+}
+
+.red-layer {
+    height: 100vh;
+    width: 170%;
+    background-color: $color-red;
+    z-index: 9;
+    position: absolute;
+    top: 285%;
+    left: 100%;
+
+    grid-row: 3 / 4;
+    grid-column: 7 / 8;
+    justify-self: end;
+}
+*/
+.menu {
+  display: grid;
+  grid-row: 3 / 4;
+  grid-column: 7 / 8;
+  justify-self: end;
+  height: 100vh;
+  width: 8rem;
+  background-color: #000000ab;
+  z-index: 9999; }
+  .menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    align-self: center; }
+  .menu__shot {
+    height: 1rem;
+    width: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    cursor: pointer; }
+  .menu__shot:first-child {
+    box-shadow: 0 0 0 0.3rem black, 0 0 0 0.5rem #e74c3c; }
+
+/* ------------------------------------------- */
 /* RATING
 /* ------------------------------------------- */
 .rating-1 {
   grid-column: 2 / 3;
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
   justify-self: center;
   align-self: center; }
 
 .rating-2 {
   grid-column: 3 / 4;
+  grid-row: 4 / 5;
   justify-self: center;
   align-self: center; }
 
 .rating-3 {
   grid-column: 4 / 5;
+  grid-row: 4 / 5;
   justify-self: center;
   align-self: center; }
 
 .rating-4 {
   grid-column: 5 / 6;
+  grid-row: 4 / 5;
   justify-self: center;
   align-self: center; }
 
 .rating-5 {
   grid-column: 6 / 7;
+  grid-row: 4 / 5;
   justify-self: center;
   align-self: center; }
 
