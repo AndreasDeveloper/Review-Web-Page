@@ -44,13 +44,12 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 85vh 160rem 80rem 40rem 60rem 30rem;
+    grid-template-rows: 85vh 170rem 90rem 90rem 80rem 30rem;
     grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
     grid-row-gap: 2rem;
 
     grid-template-areas: "head head head head head head head"
                          ". main main main main main side"
-                         ". gal gal gal gal gal gal side"
                          ". pie pie pie pie pie side"
                          "test test test test test test side"
                          "foot foot foot foot foot foot foot";
