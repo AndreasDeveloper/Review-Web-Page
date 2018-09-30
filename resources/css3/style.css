@@ -251,7 +251,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: 85vh 170rem 90rem 90rem 80rem 30rem;
+  grid-template-rows: 85vh 170rem 90rem 100rem 80rem 30rem;
   grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
   grid-row-gap: 2rem;
   grid-template-areas: "head head head head head head head" ". main main main main main side" ". pie pie pie pie pie side" "test test test test test test side" "foot foot foot foot foot foot foot"; }
@@ -610,6 +610,88 @@ html {
     font-size: 1.4rem; }
   .page-info__arrow {
     color: #c0392b; }
+
+/* ------------------------------------------- */
+/* TESTIMONIALS
+/* ------------------------------------------- */
+.section-testimonials {
+  display: grid;
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #e74c3c; }
+
+.box {
+  grid-row: 3 / 6;
+  grid-column: 2 / 5;
+  transform-style: preserve-3d;
+  perspective: 200rem;
+  transition: 0.5s;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr); }
+  .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-top: 2rem solid #fff;
+    border-left: 2rem solid #fff;
+    box-sizing: border-box; }
+  .box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-bottom: 2rem solid #fff;
+    border-right: 2rem solid #fff;
+    box-sizing: border-box; }
+  .box:hover {
+    transform: rotateY(-30deg) skewY(5deg); }
+
+.box:hover .content {
+  transform: rotateY(30deg) skewY(-5deg); }
+
+.box .content {
+  position: absolute;
+  top: 3rem;
+  left: -3rem;
+  background: #262626;
+  width: calc(100% + 6rem);
+  height: calc(100% - 6rem);
+  transition: 0.5s; }
+  .box .content__icon {
+    width: 8rem;
+    height: 8rem;
+    background-color: #fff;
+    color: #262626;
+    text-align: center;
+    line-height: 8rem !important;
+    font-size: 4rem !important; }
+    .box .content__icon--1 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .box .content__icon--2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2; }
+  .box .content__heading {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2rem; }
+  .box .content__paragraph {
+    color: #fff;
+    padding: 4rem 4rem; }
 
 /* - LAYOUT FOLDER FILES - */
 /* ------------------------------------------- */

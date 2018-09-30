@@ -44,7 +44,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 85vh 170rem 90rem 90rem 80rem 30rem;
+    grid-template-rows: 85vh 170rem 90rem 100rem 80rem 30rem;
     grid-template-columns: [full-start] repeat(6, 1fr) 20rem [full-end];
     grid-row-gap: 2rem;
 
