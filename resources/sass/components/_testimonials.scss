@@ -9,16 +9,34 @@
     grid-column: full-start / full-end;
 
     grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(24, 1fr);
 
     background-color: $color-red;
+
+    &__heading {
+        color: $color-white;
+        font-size: 4.2rem;
+
+        grid-column: 8 / 24;
+        grid-row: 2 / 3;
+
+        &:after {
+            display: block;
+            height: .2rem;
+            background-color: $color-white;
+            content: "";
+            width: 10rem;
+            margin-left: 28rem;
+            margin-top: 3rem;
+        }
+    }
 
 }
 
 .box {
 
-    grid-row: 3 / 6;
-    grid-column: 2 / 5;
+    grid-row: 4 / 7;
+    grid-column: 2 / 7;
     transform-style: preserve-3d;
     perspective: 200rem;
     transition: 0.5s;
@@ -104,5 +122,217 @@
     &__paragraph {
         color: $color-white;
         padding: 4rem 4rem;
+    }
+
+    &__by {
+        font-weight: 300;
+        font-style: italic;
+        color: $color-white;
+        margin-top: -7rem;
+        margin-left: 23rem;
+    }
+}
+
+// BOX 2 \\
+
+.box-2 {
+
+    grid-row: 4 / 7;
+    grid-column: 10 / 15;
+    transform-style: preserve-3d;
+    perspective: 200rem;
+    transition: 0.5s;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-top: 2rem solid $color-white;
+        border-left: 2rem solid $color-white;
+        box-sizing: border-box;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-bottom: 2rem solid $color-white;
+        border-right: 2rem solid $color-white;
+        box-sizing: border-box;
+    }
+
+    &:hover {
+        transform: rotateY(-30deg) skewY(5deg);;
+    }
+}
+
+.box-2:hover .content-2 {
+    transform: rotateY(30deg) skewY(-5deg);
+}
+
+.box-2 .content-2 {
+    position: absolute;
+    top: 3rem;
+    left: -3rem;
+    background: #262626;
+    width: calc(100% + 6rem);
+    height: calc(100% - 6rem);
+    transition: 0.5s;
+
+    &__icon {
+        width: 8rem;
+        height: 8rem;
+        background-color: $color-white;
+        color: #262626;
+        text-align: center;
+        line-height: 8rem !important;
+        font-size: 4rem !important;
+        
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+
+    &__heading {
+        color: $color-white;
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+
+    &__paragraph {
+        color: $color-white;
+        padding: 4rem 4rem;
+    }
+
+    &__by {
+        font-weight: 300;
+        font-style: italic;
+        color: $color-white;
+        margin-top: -7rem;
+        margin-left: 20rem;
+    }
+}
+
+// BOX 3 \\
+
+.box-3 {
+
+    grid-row: 4 / 7;
+    grid-column: 18 / 23;
+    transform-style: preserve-3d;
+    perspective: 200rem;
+    transition: 0.5s;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-top: 2rem solid $color-white;
+        border-left: 2rem solid $color-white;
+        box-sizing: border-box;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-bottom: 2rem solid $color-white;
+        border-right: 2rem solid $color-white;
+        box-sizing: border-box;
+    }
+
+    &:hover {
+        transform: rotateY(-30deg) skewY(5deg);;
+    }
+}
+
+.box-3:hover .content-3 {
+    transform: rotateY(30deg) skewY(-5deg);
+}
+
+.box-3 .content-3 {
+    position: absolute;
+    top: 3rem;
+    left: -3rem;
+    background: #262626;
+    width: calc(100% + 6rem);
+    height: calc(100% - 6rem);
+    transition: 0.5s;
+
+    &__icon {
+        width: 8rem;
+        height: 8rem;
+        background-color: $color-white;
+        color: #262626;
+        text-align: center;
+        line-height: 8rem !important;
+        font-size: 4rem !important;
+        
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+
+    &__heading {
+        color: $color-white;
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+
+    &__paragraph {
+        color: $color-white;
+        padding: 4rem 4rem;
+    }
+
+    &__by {
+        font-weight: 300;
+        font-style: italic;
+        color: $color-white;
+        margin-top: -7rem;
+        margin-left: 18rem;
     }
 }
