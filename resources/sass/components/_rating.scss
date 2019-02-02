@@ -4,7 +4,7 @@
 
 .container-3 {
     display: grid;
-    grid-template-rows: repeat(6, 15vw);
+    grid-template-rows: repeat(6, 12vw);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(16, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -18,26 +18,24 @@
     grid-template-rows: repeat(12, 5vw);
     grid-template-columns: repeat(20, 5vw);
 
+    margin-top: -10rem;
+
     &__rating-1 {
         grid-column: 1 / 4;
         grid-row: 3 / 6;
     }
-
     &__rating-2 {
         grid-column: 6 / 9;
         grid-row: 3 / 6;
     }
-
     &__rating-3 {
         grid-column: 11 / 14;
         grid-row: 3 / 6;
     }
-
     &__rating-4 {
         grid-column: 16 / 19;
         grid-row: 3 / 6;
     }
-
     &__heading {
         grid-row: 1 / 2;
         grid-column: 8 / 12;
@@ -45,7 +43,6 @@
 
         color: $color-red-dark;
     }
-
     &__heading:after {
         display: block;
         height: .2rem;
@@ -69,7 +66,7 @@
 .mark {
     position: absolute;
     top: 28%;
-    left: 29%;
+    left: 33%;
     font-size: 3.2rem;
     color: $color-red;
 }
@@ -116,14 +113,12 @@
     &__heading {
         text-transform: uppercase;
     }
-
     &__list {
         font-size: 1.4rem;
         color: $color-white;
         text-align: left;
         padding: 1rem 3rem;
     }
-
     &__item {
 
     }
@@ -136,14 +131,12 @@
     &__heading {
         text-transform: uppercase;
     }
-
     &__list {
         font-size: 1.4rem;
         color: $color-white;
         text-align: left;
         padding: 1rem 3rem;
     }
-
     &__item {
 
     }

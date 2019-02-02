@@ -1,4 +1,3 @@
-
 // MAKING BACKGORUND OF THE HEADER DARKER ON SCROLL | SETUP \\
 $(document).ready(function() {
     $(window).scroll(function() {
