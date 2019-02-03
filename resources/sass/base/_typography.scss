@@ -2,7 +2,7 @@
 /* BODY TYPOGRAHPY SETUP
 /* ------------------------------------------- */
 
-body {
+html, body {
     font-family: 'Raleway', 'Arial', 'sans-serif';
     font-weight: 500;
     /*font-size: 16px;*/
@@ -18,7 +18,6 @@ body {
     color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
 
     &--main {
         display: block;
@@ -113,10 +112,6 @@ body {
 
 .paragraph {
     font-size: 1.6rem;
-
-    &:not(:last-child) {
-        margin-bottom: 3rem;
-    }
 }
 
 .section-text {
@@ -185,14 +180,4 @@ body {
 /* PLATFORM | REVIEWS / VG
 /* ------------------------------------------------ */
 
-.platform-ps4 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.3rem;
-    letter-spacing: .3rem;
-    color: $color-white;
-    background-color: $color-blue;
-
-    padding: .2rem;
-    justify-self: start;
-}
+.platform-ps4 { background-color: $color-blue; }

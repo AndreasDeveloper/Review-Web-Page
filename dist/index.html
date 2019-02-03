@@ -7,7 +7,7 @@
         <meta name="description" content="Review page for Spider-Man PS4">
 
         <!-- LINKS / FILES -->
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i|Nunito:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
         <!-- FAVICON SETUP -->
@@ -21,20 +21,16 @@
         <!-- HEADER | START -->
         <div class="header-bg">
             <header class="header">
-                <h4 class="type-review header__type">Review</h4>
-                <h4 class="platform-ps4 header__platform">PS4</h4>
-                <h1 class="heading-1 header__heading">Spider&dash;Man</h1>
-                <p class="paragraph header__text">Spider-Man is back and it's better, stronger and bigger on PlayStation 4</p>
-                <a href="#" class="btn btn-read header__button">Read</a>
+                <div class="header__content">
+                    <h4 class="type-review header__type">Review</h4>
+                    <h4 class="type-review platform-ps4 header__platform">PS4</h4>
+                    <h1 class="heading-1 header__heading">Spider&dash;Man</h1>
+                    <p class="paragraph header__sub-text">Spider-Man is back and it's better, stronger and bigger on PlayStation 4</p>
+                    <a href="#" class="btn btn-read header__button">Read</a>
+                </div>
             </header>
         </div>
         <!-- HEADER | END -->
-
-        <!-- SIDEBAR | START -->
-          <!--  <div class="sidebar">
-                SIDEBAR
-            </div> -->
-        <!-- SIDEBAR | END -->
         
         <!-- SECTION REVIEW | START -->
         <div class="container-1">
@@ -97,143 +93,58 @@
         <!-- SECTION REVIEW | END -->
 
         <!-- SECTION GALLERY | START -->
-        <div class="container-2">
-            <section class="section-gallery">
-                <div class="section-gallery__box">
+        <section class="container-2">
+            <div class="slider-control left inactive"></div>
+            <div class="slider-control right"></div>
+            <ul class="slider-pagi"></ul>
+            <div class="slider">
+
+
+              <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+                <div class="slide__content"> 
+                  <div class="slide__text">
+                    <h2 class="slide__text-heading">Project name 1</h2>
+                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                  </div>
                 </div>
+              </div>
 
-                <!-- IMAGE SETUP -->
-                <div class="section-gallery__screenshot">
-                    <img class="section-gallery__image" src="../dist/img/shot-1.jpg" alt="Screenshot 1">
+              <div class="slide slide-1 ">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                  <div class="slide__text">
+                    <h2 class="slide__text-heading">Project name 2</h2>
+                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                  </div>
                 </div>
+              </div>
 
-             <!--   <div class="black-layer"></div>
-                <div class="red-layer"></div> -->
-            </section>
 
-            <!-- MENU / NAVIGATION IN THE GALLERY -->
-            <div class="menu">
-                <ul class="menu__list">
-                    <li class="menu__shot menu__shot--1"></li>
-                    <li class="menu__shot menu__shot--2"></li>
-                    <li class="menu__shot menu__shot--3"></li>
-                    <li class="menu__shot menu__shot--4"></li>
-                    <li class="menu__shot menu__shot--5"></li>
-                    <li class="menu__shot menu__shot--6"></li>
-                </ul>
+              <div class="slide slide-2">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                  <div class="slide__text">
+                    <h2 class="slide__text-heading">Project name 3</h2>
+                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide slide-3">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                  <div class="slide__text">
+                    <h2 class="slide__text-heading">Project name 4</h2>
+                    <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+        </section>
         <!-- SECTION GALLERY | END -->
 
-        <!-- SECTION RATING | START -->
-        <div class="container-3">
-            <section class="section-rating">
-                <h2 class="heading-2 section-rating__heading">Final Rating</h2>
-                <!-- OVERALL RATING -->
-                <div class="rating section-rating__rating-1" data-percent="93">
-                    <h4 class="heading-4 mark">9.3</h4>
-                    <h3 class="heading-3 r-el">Overall</h3>
-                        <div class="overall r-content">
-                            <!-- PROS -->
-                            <div class="pros">
-                                <h4 class="heading-4 r-p-c pros__heading">Pros</h4>
-                                <ul class="pros__list">
-                                    <li class="pros__item">Amazing Story</li>
-                                    <li class="pros__item">Smooth Gameplay Mechanics</li>
-                                    <li class="pros__item">Beatuifuly Designed World</li>
-                                    <li class="pros__item">Plenty of Content</li>
-                                </ul>
-                            </div>  
-                            <!-- CONS -->
-                            <div class="cons">
-                                <h4 class="heading-4 r-p-c cons__heading">Cons</h4>
-                                    <ul class="cons__list">
-                                        <li class="cons__item">Story Got its Twists</li>
-                                        <li class="cons__item">Repetitive Missions</li>
-                                        <li class="cons__item">Lack of Side Quests</li>
-                                    </ul>
-                            </div>
-                        </div>
-                </div>
-
-                <!-- STORY RATING -->
-                <div class="rating section-rating__rating-2" data-percent="96">
-                    <h4 class="heading-4 mark">9.6</h4>
-                    <h3 class="heading-3 r-el">Story</h3>
-                        <div class="story r-content">
-                            <!-- PROS -->
-                            <div class="pros">
-                                <h4 class="heading-4 r-p-c pros__heading">Pros</h4>
-                                <ul class="pros__list">
-                                    <li class="pros__item">Great Story Telling</li>
-                                    <li class="pros__item">Amazing Characters</li>
-                                    <li class="pros__item">Enjoyable Voice Acting</li>
-                                </ul>
-                            </div>
-                            <!-- CONS -->
-                            <div class="cons">
-                                <h4 class="heading-4 r-p-c cons__heading">Cons</h4>
-                                <ul class="cons__list">
-                                    <li class="cons__item">Story has it own twists</li>
-                                    <li class="cons__item">Lack of Some Most Iconic Characters</li>
-                                </ul>
-                            </div>
-                        </div>
-                </div>
-
-                <!-- GAMEPLAY RATING -->
-                <div class="rating section-rating__rating-3" data-percent="93">
-                    <h4 class="heading-4 mark">9.3</h4>
-                    <h3 class="heading-3 r-el">Gameplay</h3>
-                    <div class="gameplay r-content">
-                        <!-- PROS -->
-                        <div class="pros">
-                            <h4 class="heading-4 r-p-c pros__heading">Pros</h4>
-                            <ul class="pros__list">
-                                <li class="pros__item">Great Fighting Mechanics</li>
-                                <li class="pros__item">Swinging Feels Just Right</li>
-                                <li class="pros__item">Balanced Roaming Trought the City</li>
-                                <li class="pros__item">Photo Mode is perfect</li>
-                            </ul>
-                        </div>
-                        <!-- CONS -->
-                        <div class="cons">
-                            <h4 class="heading-4 r-p-c cons__heading">Cons</h4>
-                            <ul class="cons__list">
-                                <li class="cons__item">None</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GRAPHICS RATING -->
-                <div class="rating section-rating__rating-4" data-percent="91">
-                    <h4 class="heading-4 mark">9.1</h4>
-                    <h3 class="heading-3 r-el">Graphics</h3>
-                    <div class="graphics r-content">
-                        <!-- PROS -->
-                        <div class="pros">
-                            <h4 class="heading-4 r-p-c pros__heading">Pros</h4>
-                            <ul class="pros__list">
-                                <li class="pros__item">Good Visual Effects</li>
-                                <li class="pros__item">Lighting Was Changed, but still remains good</li>
-                                <li class="pros__item">Art Style</li>
-                            </ul>
-                        </div>
-                        <!-- CONS -->
-                        <div class="cons">
-                            <h4 class="heading-4 r-p-c cons__heading">Cons</h4>
-                            <ul class="cons__list">
-                                <li class="cons__item">Some Lighting Bugs</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- SECTION RATING | END -->
-
-        <!-- SECTION TESTIMONIALS | START -->
+        <!-- SECTION TESTIMONIALS | START 
         <div class="container-4">
             <section class="section-testimonials">
                 <h2 class="heading-2 section-testimonials__heading">What Others Say About This</h2>
@@ -279,7 +190,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> -->
         <!-- SECTION TESTIMONIALS | END -->
 
         <!-- FOOTER | START -->

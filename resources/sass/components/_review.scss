@@ -5,37 +5,10 @@
 .container-1 {
     display: grid;
     grid-template-rows: repeat(4, 50vh);
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 11rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.section-review {
-    display: grid;
-    grid-column: 2 / 10;
-    grid-row: 1 / 3;
-    grid-template-rows: repeat(12, 1fr);
-    font-size: 1.8rem;
-
-    &__heading {
-        padding: 2rem 0;
-        justify-content: center;
-        color: $color-red-dark;
-    }
-}
-
-.review-text {
-    grid-row: 2 / 3;
-    &--1 {
-        padding-bottom: 2rem;
-        padding-top: 6rem;
-    }
-    &--2 {
-        text-align: center;
-    }
-    &--6 {
-        text-align: center;
-    }
-}
-
+// Starting info page with an underline
 .page-info {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -43,22 +16,53 @@
     padding-top: 2rem;
     padding-bottom: 1rem;
 
-    /* -- WRITTEN BY -- */
+    // -- WRITTEN BY -- */
     &__wb {
         grid-column: 1 / 3;
         justify-self: center;
         align-self: center;
         font-size: 1.5rem;
     }
-    /* -- LAST UPDATED -- */
+    // -- LAST UPDATED -- */
     &__lu {
         grid-column: 8 / 9;
         justify-self: center;
         align-self: center;
         font-size: 1.4rem;
     }
-    /* -- ARROW BY THE AUTHOR -- */
+    // -- ARROW BY THE AUTHOR -- */
     &__arrow {
         color: $color-red-dark;
+    }
+}
+
+// - Full section wrapper
+.section-review {
+    display: grid;
+    grid-column: 2 / 10;
+    grid-template-rows: repeat(12, 1fr);
+    font-size: 1.8rem;
+    &__heading {
+        padding: 1.5rem 0;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        justify-content: center;
+        color: $color-red-dark;
+    }
+}
+
+// - Review text
+.review-text {
+    grid-row: 2 / 3;
+    &--1 {
+        padding-bottom: 2rem;
+        padding-top: 6rem;
+        text-align: center;
+    }
+    &--2 {
+        text-align: center;
+    }
+    &--6 {
+        text-align: center;
     }
 }
