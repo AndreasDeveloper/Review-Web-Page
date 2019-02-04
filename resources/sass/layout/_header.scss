@@ -10,8 +10,10 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: 2;
-    height: 85vh;
-    max-width: 100%;
+    min-height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
 
     &__content {
         display: flex;

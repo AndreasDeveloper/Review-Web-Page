@@ -3,20 +3,30 @@
 /* ------------------------------------------- */
 
 .container-1 {
-    display: grid;
-    grid-template-rows: repeat(5, 50vh);
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 11rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+    display: grid;  
+    background-color: $color-gray-light-5;
+    padding: 0 30rem;
+    // RESPONSIVE LAYOUT
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     // * --- MEDIA QUERIES --- * \\
+    // Smaller Desktop
+    @media only screen and (max-width: $bp-desktop) {
+        padding: 0 25rem;
+    }
     // I Pro
     @media only screen and (max-width: $bp-largest-5) {
-        grid-template-rows: repeat(4, 34vh);
+        padding: 0 22rem;
     }
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: repeat(4, 40vh);
+        padding: 0 20rem;
+        padding-bottom: 5rem;
     }
     @media only screen and (max-width: $bp-small) {
-        grid-template-rows: repeat(9, 95vh);
+        padding: 0 5rem;
+        padding-bottom: 5rem;
     }
     // Pixel 2
     @media only screen and (max-width: $bp-vsmall-1b) {
@@ -35,6 +45,11 @@
     }
 }
 
+// - Full section wrapper
+.section-review {
+    font-size: 1.8rem;
+}
+
 // Starting info page with an underline
 .page-info {
     display: grid;
@@ -42,6 +57,13 @@
     border-bottom: .26rem solid $color-red-dark;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        padding-bottom: 4.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        padding-bottom: 3.6rem;
+    }
 
     // -- WRITTEN BY -- */
     &__wb {
@@ -49,6 +71,16 @@
         justify-self: center;
         align-self: center;
         font-size: 1.5rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / 4;
+            font-size: 1.4rem;
+            justify-self: start;
+        }
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 5;
+            font-size: .9rem;
+        }
     }
     // -- LAST UPDATED -- */
     &__lu {
@@ -56,6 +88,11 @@
         justify-self: center;
         align-self: center;
         font-size: 1.4rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 7 / 9;
+            font-size: 1rem;
+        }
     }
     // -- ARROW BY THE AUTHOR -- */
     &__arrow {
@@ -63,24 +100,21 @@
     }
 }
 
-// - Full section wrapper
-.section-review {
-    display: grid;
-    grid-column: 2 / 10;
-    grid-template-rows: repeat(12, 5vw);
-    font-size: 1.8rem;
+// - Review text
+.review-text {
+    grid-row: 2 / 12;
+    // Headings
     &__heading {
         padding: 1.5rem 0;
         letter-spacing: .2rem;
         font-weight: 500;
         justify-content: center;
         color: $color-red-dark;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            justify-content: left;
+        }
     }
-}
-
-// - Review text
-.review-text {
-    grid-row: 2 / 12;
     &--1 {
         padding-bottom: 2rem;
         padding-top: 6rem;
@@ -91,5 +125,10 @@
     }
     &--6 {
         text-align: center;
+    }
+    p {
+        @media only screen and (max-width: $bp-small) {
+            text-align: left;
+        }
     }
 }

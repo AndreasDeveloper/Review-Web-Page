@@ -2,6 +2,7 @@
 /* IMAGE SLIDER
 /* ------------------------------------------- */
 
+// Main Wrapper
 .container-2 {
     position: relative;
     height: 100vh;
@@ -12,7 +13,7 @@
             user-select: none;
     cursor: all-scroll;
     overflow: hidden;
-    margin-top: 5rem;
+    margin-top: 10rem;
     //margin: 50rem 15rem 5rem 15rem;
     //box-shadow: 1rem 1rem 1.5rem rgba($color-black, .50);
     // * -- MEDIA QUERIES -- * \\
@@ -239,16 +240,10 @@
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     opacity: 0;
+    background-color: rgba($color-black, .60);
+    padding: 2rem;
   }
-  
-  
-  
-  
   a.slide__text-link:hover { text-decoration:none; color:#FFF;}
-  
-  
-  
-  
   
   @media (max-width: 991px) {
     .slide__text {
@@ -268,9 +263,14 @@
   }
   .slide__text-heading {
     font-family: 'Raleway';
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
+    letter-spacing: .3rem;
     margin-bottom: 2rem;
+      // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-desktop) {
+      font-size: 3.5rem;
+    }
   }
   @media (max-width: 991px) {
     .slide__text-heading {
@@ -281,7 +281,7 @@
   .slide__text-desc {
     font-family: 'Raleway';
     font-size: 1.8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .1rem;
     margin-bottom: 1.5rem;
   }

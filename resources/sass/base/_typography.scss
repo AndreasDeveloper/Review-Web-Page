@@ -7,7 +7,8 @@ html, body {
     font-weight: 500;
     /*font-size: 16px;*/
     line-height: 1.7;
-    color: $color-grey-dark-4;
+    color: $color-gray-dark-4;
+    background-color: $color-gray-light-5;
 }
 
 /* ------------------------------------------- */
@@ -106,8 +107,8 @@ html, body {
     font-size: 1.9rem;
 
     // LIGHT AND DARK VERSION OF HEADING 4 \\
-    &--light { color: $color-grey-light-1; }
-    &--dark { color: $color-grey-dark-1; }
+    &--light { color: $color-gray-light-1; }
+    &--dark { color: $color-gray-dark-1; }
 }
 
 .paragraph {
