@@ -4,8 +4,35 @@
 
 .container-1 {
     display: grid;
-    grid-template-rows: repeat(4, 50vh);
+    grid-template-rows: repeat(5, 50vh);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 11rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
+    // * --- MEDIA QUERIES --- * \\
+    // I Pro
+    @media only screen and (max-width: $bp-largest-5) {
+        grid-template-rows: repeat(4, 34vh);
+    }
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: repeat(4, 40vh);
+    }
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: repeat(9, 95vh);
+    }
+    // Pixel 2
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        grid-template-rows: repeat(9, 45vh);
+    }
+    // S5
+    @media only screen and (max-width: $bp-vsmall-3) {
+        grid-template-rows: repeat(9, 45vh);
+    }
+    @media only screen and (max-width: $bp-vsmall-3b) {
+        grid-template-rows: repeat(9, 60vh);
+    }
+    // I5
+    @media only screen and (max-width: $bp-vsmall-4) {
+        grid-template-rows: repeat(9, 80vh);
+    }
 }
 
 // Starting info page with an underline
@@ -40,7 +67,7 @@
 .section-review {
     display: grid;
     grid-column: 2 / 10;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 5vw);
     font-size: 1.8rem;
     &__heading {
         padding: 1.5rem 0;
@@ -53,7 +80,7 @@
 
 // - Review text
 .review-text {
-    grid-row: 2 / 3;
+    grid-row: 2 / 12;
     &--1 {
         padding-bottom: 2rem;
         padding-top: 6rem;

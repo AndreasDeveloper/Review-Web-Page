@@ -1,18 +1,24 @@
-svg {
-    display: block;
-    overflow: hidden;
-  }
-  
-  .container-2 {
+/* ------------------------------------------- */
+/* IMAGE SLIDER
+/* ------------------------------------------- */
+
+.container-2 {
     position: relative;
     height: 100vh;
+    max-width: 100%;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     cursor: all-scroll;
     overflow: hidden;
-    margin: 5rem;
+    margin-top: 5rem;
+    //margin: 50rem 15rem 5rem 15rem;
+    //box-shadow: 1rem 1rem 1.5rem rgba($color-black, .50);
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+    }
   }
   
   .slider-control {
@@ -125,6 +131,7 @@ svg {
     left: -50%;
     width: 100%;
     height: 100%;
+    max-width: 100%;
     background-size: cover;
     will-change: transform;
   }
