@@ -10,11 +10,10 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: 2;
-    min-height: 85vh;
+    height: 85vh;
     width: 100%;
-    position: relative;
-    padding-top: 56.25%;
 
+    // Main content wrapper
     &__content {
         display: flex;
         flex-direction: column;
@@ -22,72 +21,55 @@
         align-items: flex-start;
         position: absolute;
         top: 25%;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) { top: 30%; }
+        @media only screen and (max-width: $bp-small) { top: 30%; }
     }
+    // Heading
     &__heading {
         color: $color-white;
         font-weight: 400;
         font-size: 6rem;
         letter-spacing: 1.6rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3.5rem;
+        }
     }
+    // Sub-Heading
     &__sub-text {
         color: $color-white;
         font-size: 1.9rem;
         font-weight: 300;
         letter-spacing: .15rem;
         margin-bottom: 2rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
+    // Types (Review/Platform)
+    &__types {
+        display: grid;
+        width: 10rem;
+        grid-gap: .5rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    // Platform & Type
     &__platform,
     &__type {
-
-    }
-    
-    /*
-    // GRID SETUP \\
-    display: grid;
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: repeat(12, 1fr);
-
-    &__heading {
-        grid-row: 5 / 7;
-        grid-column: 2 / 11;
-
-        font-size: 6rem;
-        font-weight: 300;
-        letter-spacing: 2rem;
-        justify-content: center;
+        font-weight: 700;
+        padding: .4rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            padding: .3rem;
+        }
     }
 
-    &__text {
-        grid-row: 7 / 10;
-        grid-column: 2 / 10;
-
-        color: $color-white;
-        font-size: 1.9rem;
-        font-weight: 300;
-        letter-spacing: .15rem;
+    // * --- HEADER MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        height: 85vh;
+        background-position: 80%;
     }
-
-    &__button {
-        grid-row: 8 / 9;
-        grid-column: 2 / 3;
-        justify-self: center;
-        align-self: center;
-    }
-
-    &__type {
-        grid-row: 4 / 5;
-        grid-column: 2 / 3;
-        align-self: flex-end;
-        width: 100%;
-        margin-bottom: .8rem;
-    }
-
-    &__platform {
-        grid-row: 4 / 5;
-        grid-column: 3 / 4;
-        align-self: flex-end;
-        width: 100%;
-        margin-bottom: .8rem;
-        margin-left: .4rem;
-    }*/
 } 

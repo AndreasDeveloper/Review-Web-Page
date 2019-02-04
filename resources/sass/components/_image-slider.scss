@@ -11,11 +11,11 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    cursor: all-scroll;
+    cursor: pointer;
     overflow: hidden;
     margin-top: 10rem;
-    //margin: 50rem 15rem 5rem 15rem;
-    //box-shadow: 1rem 1rem 1.5rem rgba($color-black, .50);
+    margin-right: 5rem;
+    margin-left: 5rem;
     // * -- MEDIA QUERIES -- * \\
     @media only screen and (max-width: $bp-medium) {
       margin: 0;
@@ -142,60 +142,56 @@
   .slide:nth-child(1) .slide__bg {
     left: 0;
     background-image: url(../images/shot-1.jpg);
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest-5) { background-position: 50%; }
+    @media only screen and (max-width: $bp-medium) { background-position: 45%; }
   }
   .slide:nth-child(1) .slide__overlay-path {
     fill: #e99c7e;
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(1) .slide__text {
-      background-color: rgba($color-red, 0.8);
-    }
-  }
+
   .slide:nth-child(2) {
     left: 100%;
   }
   .slide:nth-child(2) .slide__bg {
     left: -50%;
     background-image: url(../images/shot-2.jpg);
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest-5) { background-position: 75%; }
+    @media only screen and (max-width: $bp-medium) { background-position: 70%; }
   }
   .slide:nth-child(2) .slide__overlay-path {
     fill: #e1ccae;
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(2) .slide__text {
-        background-color: rgba($color-red, 0.8);
-    }
-  }
+
   .slide:nth-child(3) {
     left: 200%;
   }
   .slide:nth-child(3) .slide__bg {
     left: -100%;
     background-image: url(../images/shot-3.jpg);
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest-5) { background-position: 65%; }
+    @media only screen and (max-width: $bp-medium) { background-position: 60%; }
   }
   .slide:nth-child(3) .slide__overlay-path {
     fill: #adc5cd;
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(3) .slide__text {
-        background-color: rgba($color-red, 0.8);
-    }
-  }
+ 
   .slide:nth-child(4) {
     left: 300%;
   }
   .slide:nth-child(4) .slide__bg {
     left: -150%;
     background-image: url(../images/shot-4.jpg);
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest-5) { background-position: 40%; }
+    @media only screen and (max-width: $bp-medium) { background-position: 45%; }
   }
   .slide:nth-child(4) .slide__overlay-path {
     fill: #cbc6c3;
   }
-  @media (max-width: 991px) {
-    .slide:nth-child(4) .slide__text {
-        background-color: rgba($color-red, 0.8);
-    }
-  }
+ 
   .slide__content {
     position: absolute;
     top: 0;

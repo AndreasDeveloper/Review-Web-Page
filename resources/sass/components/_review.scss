@@ -13,13 +13,9 @@
 
     // * --- MEDIA QUERIES --- * \\
     // Smaller Desktop
-    @media only screen and (max-width: $bp-desktop) {
-        padding: 0 25rem;
-    }
+    @media only screen and (max-width: $bp-desktop) { padding: 0 25rem; }
     // I Pro
-    @media only screen and (max-width: $bp-largest-5) {
-        padding: 0 22rem;
-    }
+    @media only screen and (max-width: $bp-largest-5) { padding: 0 22rem; }
     @media only screen and (max-width: $bp-medium) {
         padding: 0 20rem;
         padding-bottom: 5rem;
@@ -27,21 +23,6 @@
     @media only screen and (max-width: $bp-small) {
         padding: 0 5rem;
         padding-bottom: 5rem;
-    }
-    // Pixel 2
-    @media only screen and (max-width: $bp-vsmall-1b) {
-        grid-template-rows: repeat(9, 45vh);
-    }
-    // S5
-    @media only screen and (max-width: $bp-vsmall-3) {
-        grid-template-rows: repeat(9, 45vh);
-    }
-    @media only screen and (max-width: $bp-vsmall-3b) {
-        grid-template-rows: repeat(9, 60vh);
-    }
-    // I5
-    @media only screen and (max-width: $bp-vsmall-4) {
-        grid-template-rows: repeat(9, 80vh);
     }
 }
 
@@ -59,7 +40,7 @@
     padding-bottom: 1rem;
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-medium) {
-        padding-bottom: 4.6rem;
+        padding-bottom: 1rem;
     }
     @media only screen and (max-width: $bp-small) {
         padding-bottom: 3.6rem;
@@ -72,9 +53,9 @@
         align-self: center;
         font-size: 1.5rem;
         // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-medium) {
-            grid-column: 1 / 4;
+        @media only screen and (max-width: $bp-desktop) {
             font-size: 1.4rem;
+            grid-column: 1 / 4;
             justify-self: start;
         }
         @media only screen and (max-width: $bp-small) {
@@ -89,6 +70,9 @@
         align-self: center;
         font-size: 1.4rem;
         // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            grid-column: 7 / 9;
+        }
         @media only screen and (max-width: $bp-small) {
             grid-column: 7 / 9;
             font-size: 1rem;
@@ -125,6 +109,7 @@
     }
     &--6 {
         text-align: center;
+        @include underline;
     }
     p {
         @media only screen and (max-width: $bp-small) {

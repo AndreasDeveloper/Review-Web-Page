@@ -1,0 +1,70 @@
+/* ------------------------------------------- */
+/* RATING 
+/* ------------------------------------------- */
+
+// Main Container
+.container-3 {
+    position: relative;
+    padding: 0 10rem;
+    height: 35vh;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+    }
+}
+
+// Block wrapper
+.blocks {
+    height: 30vh;
+    color: $color-white;
+    background-color: $color-red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 4rem;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        height: 115vh;
+    }
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        height: 98vh;
+    }
+    @media only screen and (max-width: $bp-vsmall-3) {
+        height: 115vh;
+    }
+    @media only screen and (max-width: $bp-vsmall-4) {
+        height: 130vh;
+    }
+}
+
+.block-1,
+.block-2,
+.block-3,
+.block-4 {
+    padding: 2rem;
+}
+
+// Rating
+.rating {
+    font-size: 4rem;
+    font-weight: 500;
+}
+// Heading
+.heading {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+// Text
+.text {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+// Icons
+.icons {
+    font-size: 2.6rem;
+}

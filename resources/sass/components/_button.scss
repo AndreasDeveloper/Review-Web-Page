@@ -14,6 +14,10 @@
     text-transform: uppercase;
     overflow: hidden;
     transition: all 1s ease;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        padding: 1rem 3rem;
+    }
 }
 
 .btn::before {
