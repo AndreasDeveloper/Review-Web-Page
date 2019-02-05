@@ -30,3 +30,37 @@
         opacity: 1;
     }
 }
+
+/* ------------------------------------------- */
+/* ANIMATIONS | TESTIMONIAL CARD
+/* ------------------------------------------- */
+@keyframes animatop{
+    0%{ 
+      opacity: 0;
+      bottom: -50rem;}
+    100%{  
+     opacity: 1;  
+    bottom: 0rem;}
+  }
+   
+  @keyframes animainfos{
+    0%{
+      bottom:  1rem;}
+    100%{
+    bottom: -4.2rem;}
+  }
+  
+  @keyframes rotatemagic{
+    0%{
+      opacity: 0;
+      transform: rotate(-0deg);
+      top: -2.4rem;
+      left: -25.3rem;
+    }
+    100%{
+      
+      transform: rotate(-30deg);
+      top: -2.4rem;
+      left: -7.8rem;
+    }
+  }
