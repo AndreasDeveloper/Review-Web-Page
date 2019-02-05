@@ -1,0 +1,108 @@
+/* ------------------------------------------- */
+/* FOOTER
+/* ------------------------------------------- */
+
+// Main footer wrapper
+.footer {
+    height: 40vh;
+    margin-top: 5rem;
+    position: relative;
+    background-color: $color-red-dark;
+    color: $color-white;
+    display: flex;
+    flex-direction: row;
+    padding: 0 10rem;
+    justify-content: center;
+    overflow: hidden;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+        height: 30vh;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 40vh;
+        height: 80vh;
+        flex-direction: column;
+        padding: 0;
+    }
+    @media only screen and (max-width: $bp-vsmall-4) { margin-top: 45vh; }
+}
+
+// All sides of the footer
+.side-1,
+.side-2,
+.side-3,
+.legal {
+    display: flex;
+    align-items: center;
+    margin: 0 8rem;
+    text-align: center;
+    // All of the h2
+    h2 { 
+        font-weight: 400;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            color: transparent;
+            background: $color-red;
+            height: .1rem;
+        }
+        &:hover:after { width: 100%; }
+     }
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest-5) { margin: 0 3rem; }
+    @media only screen and (max-width: $bp-medium) { margin: 0 4rem; }
+    @media only screen and (max-width: $bp-small) {
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+}
+
+// Left side of the footer (Privacy Policy, T&C, About)
+.side-1 {
+    &__left:nth-child(1) { @include underline-before; }
+    &__left h2 {
+        padding: .5rem 0;
+        cursor: pointer;
+    }
+}
+
+// Big Header | Center of the footer
+.side-2 {
+    &__center h2 {
+       text-transform: uppercase;
+       letter-spacing: .5rem;
+       font-size: 4.5rem;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) { margin: 0; }
+    }
+}
+
+// Right side of the footer (News, Reviews, Contact)
+.side-3 {
+    &__right:nth-child(1) { @include underline-before; }
+    &__right h2 {
+        padding: .5rem 0;
+        cursor: pointer;
+    }
+}
+
+// Legal Text
+.legal {
+    text-align: start;
+    // All of the h3
+    h3 {
+        font-weight: 300;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) { font-size: .1rem; }
+        @media only screen and (max-width: $bp-small) { font-size: 1.4rem; }
+    }
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) { margin: 0 auto; }
+}

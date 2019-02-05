@@ -9,9 +9,7 @@
     height: 35vh;
 
     // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-medium) {
-        padding: 0;
-    }
+    @media only screen and (max-width: $bp-medium) { padding: 0; } 
     @media only screen and (max-width: $bp-small) {
         // RESPONSIVE LAYOUT
         display: flex;
@@ -20,6 +18,7 @@
     }
     @media only screen and (max-width: $bp-vsmall-3) { min-height: 120vh; }
     @media only screen and (max-width: $bp-vsmall-3b) { min-height: 115vh; }
+    @media only screen and (max-width: $bp-vsmall-4) { height: 135vh; }
 }
 
 // Block wrapper
@@ -38,15 +37,9 @@
         flex-direction: column;
         height: 115vh;
     }
-    @media only screen and (max-width: $bp-vsmall-1b) {
-        height: 98vh;
-    }
-    @media only screen and (max-width: $bp-vsmall-3) {
-        height: 115vh;
-    }
-    @media only screen and (max-width: $bp-vsmall-4) {
-        height: 130vh;
-    }
+    @media only screen and (max-width: $bp-vsmall-1b) { height: 98vh; }
+    @media only screen and (max-width: $bp-vsmall-3) { height: 115vh; }
+    @media only screen and (max-width: $bp-vsmall-4) { height: 135vh; }
 }
 
 .block-1,

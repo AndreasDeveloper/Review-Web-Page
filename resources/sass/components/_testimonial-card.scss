@@ -31,6 +31,9 @@
         display: flex;
         justify-content: center;
         // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-desktop) {
+            padding-top: 1rem;
+        }
         @media only screen and (max-width: $bp-small) {
             margin-top: 2rem;
             padding-top: 2rem;
